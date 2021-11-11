@@ -39,11 +39,8 @@ public class PracticaBucles {
      *  Devuelve true si numero es impar, false en otro caso
      *  Hazlo sin utilizar if
      */
-    public boolean esImpar(int numero)   {
-        //TODO
-        
-        
-        return  false;
+    public boolean esImpar(int numero)   {        
+        return  numero % 2 != 0;
     }
 
     /**
@@ -56,10 +53,25 @@ public class PracticaBucles {
      *   
      */
     public int obtenerNumeroSinCeros(int numero)   {
-        //TODO
+        int i = 0;
+        int sinCeros = 0;
+        while (numero > 0) {
+            int resto = numero % 10;
+            int divisor = numero / 10;
+            if(resto == 0)  {
+                resto = divisor % 10;
+            }
+            
+            else{
+                int potencia = (int) Math.pow(10, i);
+                sinCeros = sinCeros + (potencia * resto);
+                i++;
+            }
+            
+            numero /= 10;
+        }
         
-        
-        return 0;
+        return sinCeros;
     }
 
     /**
