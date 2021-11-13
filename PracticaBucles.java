@@ -36,8 +36,8 @@ public class PracticaBucles {
         int j = 0;
         double media = 0;
         int sumaImpares = 0;
-        int maximoPar = numero;
-        System.out.println("Nº maximo de aleatorios a generar" + n + "\no hasta que salga el 0\n");
+        int maximoPar = 0;
+        System.out.println("Nº maximo de aleatorios a generar " + n + "\no hasta que salga el 0\n");
         while(numero != 0 && n != i)  {
             System.out.printf("%12d:%6d", numero, obtenerNumeroSinCeros(numero));
             i++;
@@ -48,7 +48,7 @@ public class PracticaBucles {
             if (esImpar(numero))  {
                 sumaImpares = sumaImpares + numero;
             }
-            else {
+            else    {
                 if (numero >= maximoPar) {
                     maximoPar = numero;
                 }
@@ -66,7 +66,7 @@ public class PracticaBucles {
             media = (media + numero) / j;
         }
 
-        System.out.printf("\n%25s%10.2f","Media: ", media);
+        System.out.printf("\n\n\n%25s%10.2f","Media: ", media);
         System.out.printf("\n%25s%10d","Suma impares: ", sumaImpares);
         System.out.printf("\n%25s%10d","Maximo pares: ", maximoPar);
     }
