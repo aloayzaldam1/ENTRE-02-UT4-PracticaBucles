@@ -34,12 +34,14 @@ public class PracticaBucles {
         int numero = generador.nextInt(6001) - 1000;
         int i = 0;
         int j = 0;
+        int sinCeros = 0;
         double media = 0;
         int sumaImpares = 0;
         int maximoPar = 0;
         System.out.println("Nº maximo de aleatorios a generar " + n + "\no hasta que salga el 0\n");
         while(numero != 0 && n != i)  {
-            System.out.printf("%12d:%6d", numero, obtenerNumeroSinCeros(numero));
+            sinCeros = obtenerNumeroSinCeros(numero);
+            System.out.printf("%12d:%6d", numero, sinCeros);
             i++;
             if(i % 5 == 0)   {
                 System.out.println();
@@ -53,17 +55,17 @@ public class PracticaBucles {
                     maximoPar = numero;
                 }
             }
-            media = media + numero;
+            media = media + numero + sinCeros;
             j++;
             numero = generador.nextInt(6001) - 1000;
         }
 
         if (n == i)  {
-            media = (media + numero) / n;
+            media = media / (n * 2); //Este cuando salgan todos los numeros insertados
         }
 
         else {
-            media = (media + numero) / j;
+            media = media / (j * 2); //Este en caso de que salga un 0
         }
 
         System.out.printf("\n\n\n%25s%10.2f","Media: ", media);
