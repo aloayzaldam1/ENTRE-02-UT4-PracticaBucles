@@ -44,7 +44,7 @@ public class PracticaBucles {
             if(i % 5 == 0)   {
                 System.out.println();
             }
-            
+
             if (esImpar(numero))  {
                 sumaImpares = sumaImpares + numero;
             }
@@ -129,7 +129,8 @@ public class PracticaBucles {
      *   
      */
     public void escribirLetraN(int altura)    {
-        //TODO
+        System.out.println("Letra N - Altura: " + altura);
+        escribirCaracter('@',altura);
 
     }
 
@@ -138,7 +139,19 @@ public class PracticaBucles {
      *  con bucles for
      */
     private void escribirCaracter(char caracter, int n)    {
-        //TODO
-
-    }
+        String str = "";
+        for(int i = 1; n > i; i++) {
+            str += caracter;
+            for(int j = 1; j < i; j++){
+                str = str + ESPACIO;
+            }
+            str += caracter;
+            for(int k = 1; k < n - i; k++)   {
+                str = str + ESPACIO;
+            }
+            str = str + caracter + "\n";
+        }
+        System.out.print(str);
+        }
 }
+
