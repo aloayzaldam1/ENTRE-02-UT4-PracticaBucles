@@ -2,11 +2,12 @@ import java.util.Scanner;
 /**
  *   Clase de utilidades
  *   Incluye métodos estáticos
+ *   @author - Asier Loayza
  */
 public class Utilidades
 {
     private static Scanner teclado = new Scanner(System.in);
-    
+
     /**
      *  Hacer una pausa  
      */
@@ -15,14 +16,13 @@ public class Utilidades
         teclado.nextLine();
 
     }
-    
-     /**
+
+    /**
      *  Borrar la pantalla
      */
     public static void borrarPantalla()    {
         System.out.print('\u000C');
 
     }
-    
-    
+
 }

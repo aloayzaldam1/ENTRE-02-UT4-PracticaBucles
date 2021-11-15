@@ -3,11 +3,11 @@ import java.util.Scanner;
 /**
  * Incluye todo el código dentro del main()
  * No declares ningún nuevo método en esta clase ni atributos
- *  
+ * @author - Asier Loayza
  */
 public class TestPracticaBucles
 {
-    
+
     /**
      *  Punto de entrada a la aplicación
      *  - define y crea el teclado  

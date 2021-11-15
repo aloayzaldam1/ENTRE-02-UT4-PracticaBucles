@@ -1,6 +1,6 @@
 import java.util.Random;
 /**
- *    
+ *  @author - Asier Loayza
  */
 public class PracticaBucles {
     private final char ESPACIO = ' ';
@@ -132,7 +132,7 @@ public class PracticaBucles {
      */
     public void escribirLetraN(int altura)    {
         System.out.println("Letra N - Altura: " + altura);
-        escribirCaracter('@',altura);
+        escribirCaracter(CARACTER ,altura);
 
     }
 
@@ -154,6 +154,6 @@ public class PracticaBucles {
             str = str + caracter + "\n";
         }
         System.out.print(str);
-        }
+    }
 }
 
